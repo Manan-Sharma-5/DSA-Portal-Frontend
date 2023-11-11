@@ -185,7 +185,10 @@ const Leaderboard = () => {
               <div className="bg-[#B5DBFA] rounded-md md:rounded-tr-md rounded-tr-3xl p-4 text-center">
                 Rank:{" "}
                 <span className="bg-[#66BB6A] lg:text-xl text-white rounded-full px-2 py-1">
-                  #1
+                  {leaderboard.findIndex(
+                    (user) =>
+                      user.leetcodeUserName === credentials.leetcodeUserName
+                  ) + 1}
                 </span>
               </div>
               <div className="bg-[#B5DBFA] rounded-md flex justify-evenly lg:text-base md:text-sm text-xs">
